@@ -15,6 +15,7 @@
 
 a{
     text-decoration: none;
+    color: var(--black);
 }
 
 #service a,
@@ -24,17 +25,22 @@ a{
 }
 
 #logo-text,
-h2{
+h2,
+h3{
     font-weight: 700;
 }
 
 /* Header */
+header,
+.cart{
+    z-index: 1;
+}
+
 header{
     margin-top: 1rem;
     top: 0;
     position: sticky;
     background-color: var(--white);
-    z-index: 1;
 }
 
 .header-container {
@@ -66,6 +72,7 @@ button{
 
 .cart{
     margin-right: 1rem;
+    top: 2px;
 }
 
 .cart:hover{
@@ -83,7 +90,8 @@ button{
 }
 
 /* Nav */
-#nav-bar{
+#nav-bar,
+.flex{
     margin-top: 0.5rem;
 }
 
@@ -95,7 +103,6 @@ button{
 #nav-bar ul a{
     display: inline-block;
     padding: 1rem;
-    color: var(--black);
 }
 
 #nav-bar ul a:hover{
@@ -119,6 +126,20 @@ button{
 
 /* Main */
 
+#service a .appointment-text,
+.arrow,
+.title-and-link h3
+{
+    z-index: 0;
+}
+
+#service a .appointment-text,
+.arrow,
+.title-and-link h3,
+.cart{
+    position: relative;
+}
+
 h2{
     margin-top: 2rem;
 }
@@ -139,20 +160,18 @@ iframe{
     display: block;
     width: 240px;
     background: var(--brand-color);
-    color: var(--black);
     padding: 0.7rem;
     border-radius: 100px;
     margin: 0.5rem auto 0;
 }
 
-#service a:hover {
+#service a:hover,
+.title-and-link a:hover {
     color: var(--white);
 }
 
 #service a .appointment-text{
-    position: relative;
     bottom: 4px;
-    z-index: 0;
 }
 
 .center{
@@ -160,8 +179,31 @@ iframe{
     margin: 0 auto;
 }
 
-
 .items img{
     width: 50%;
-    
+}
+
+.flex{
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--brand-color);
+}
+
+.flex .title-and-link{
+    align-self: center;
+    width: 50%;
+    text-align: center;
+}
+
+.title-and-link h3{
+    left: -10px;
+}
+
+.title-and-link a {
+    text-decoration: underline;
+}
+
+.arrow{
+    top: 5px;
+    left: 25px;
 }
