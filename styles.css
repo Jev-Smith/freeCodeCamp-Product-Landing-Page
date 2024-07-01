@@ -13,6 +13,7 @@
     --brand-color: #f18318;
     --one-rem: 1rem;
     --half-rem: 0.5rem;
+    --dark-grey: #292929;
 }
 
 a{
@@ -22,14 +23,16 @@ a{
 
 #service a,
 #nav-bar ul a,
-#service a .appointment-text{
+#service a .appointment-text,
+.times{
     font-weight: 500;
 }
 
 #logo-text,
 h2,
 h3,
-input[type="submit"]{
+input[type="submit"],
+#location-and-hours div a span{
     font-weight: 700;
 }
 
@@ -38,6 +41,12 @@ input[type="submit"]{
 .title-and-link a div,
 .center {
     margin: 0 auto;
+}
+
+#nav-bar ul a,
+#logo-text,
+.location-and-hours-container div a{
+    display: inline-block;
 }
 
 /* Header */
@@ -111,7 +120,6 @@ button{
 }
 
 #nav-bar ul a{
-    display: inline-block;
     padding: var(--one-rem);
 }
 
@@ -130,7 +138,6 @@ button{
 }
 
 #logo-text{
-    display: inline-block;
     font-size: 1.5rem;
 }
 
@@ -143,7 +150,8 @@ input[type="submit"],
 
 #service a .appointment-text,
 .arrow,
-.title-and-link h3
+.title-and-link h3,
+.pin-drop
 {
     z-index: 0;
 }
@@ -151,12 +159,15 @@ input[type="submit"],
 #service a .appointment-text,
 .arrow,
 .title-and-link h3,
-.cart{
+.cart,
+.pin-drop{
     position: relative;
 }
 
 h2,
-.form-div{
+.form-div,
+#location-and-hours
+{
     margin-top: 2rem;
 }
 
@@ -181,7 +192,8 @@ iframe{
 
 #service a:hover,
 .title-and-link a:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.location-and-hours-container div a:hover{
     color: var(--white);
 }
 
@@ -231,7 +243,7 @@ input[type="submit"]:hover {
 .form-div{
     color: var(--white);
     padding: var(--one-rem);
-    background-color: #292929;
+    background-color: var(--dark-grey);
 }
 
 form{
@@ -240,7 +252,7 @@ form{
 
 input[type="email"]{
     margin-top: var(--half-rem);
-    width: 250px;
+    width: 210px;
     padding-left: 5px;
 }
 
@@ -255,4 +267,46 @@ input[type="submit"]{
     border: none;
     margin-left: var(--half-rem);
     cursor: pointer;
+}
+
+/* Location and Hours */
+.margin{
+    margin-top: var(--half-rem);
+}
+
+#location-and-hours h2{
+    margin-top: 0;
+}
+
+.location-and-hours-container{
+    margin-top: var(--half-rem);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--brand-color);
+    padding: var(--one-rem);
+}
+
+.location-and-hours-container ul{
+    width: 50%;
+}
+
+.location-and-hours-container div{
+    border-left: 2px solid var(--black);
+    width: 48%;
+    padding-left: 30px;
+}
+
+.pin-drop{
+    top: 5px;
+}
+
+#about{
+    margin-bottom: var(--one-rem);
+}
+
+#about p{
+    margin-top: var(--half-rem);
+    background-image: linear-gradient(to right, var(--dark-grey), #6f3b06);
+    color: var(--white);
+    padding: var(--one-rem);
 }
