@@ -173,6 +173,7 @@ h2,
 
 .container{
     width: 95%;
+    max-width: 800px;
 }
 
 iframe{
@@ -250,6 +251,10 @@ form{
     padding-top: var(--one-rem);
 }
 
+form label{
+    display: block;
+}
+
 input[type="email"]{
     margin-top: var(--half-rem);
     width: 210px;
@@ -309,4 +314,56 @@ input[type="submit"]{
     background-image: linear-gradient(to right, var(--dark-grey), #6f3b06);
     color: var(--white);
     padding: var(--one-rem);
+}
+
+@media screen and (min-width: 545px) {
+    .title-and-link h3{
+        font-size: 22px;
+        margin-bottom: var(--half-rem);
+    }
+
+    .title-and-link div span{
+        font-size: 20px;
+    } 
+
+    .arrow{
+        transform: scale(1.4);
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #shop-by-pets{
+        margin: 0 auto;
+        max-width: 650px;
+    }
+
+    #shop-by-pets h2{
+        text-align: center;
+    }
+
+    .form-header{
+        text-align: center;
+    }
+
+    form label {
+        display: inline;
+    }
+
+    form div{
+        width: 370px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    #shop-by-pets h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    h2{
+        text-align: center;
+    }
 }
