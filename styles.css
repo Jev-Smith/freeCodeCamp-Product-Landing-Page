@@ -245,11 +245,15 @@ input[type="submit"]:hover,
 
 .title-and-link h3,
 .title-and-link a div{
-    width: 40%;
+    width: 30%;
 }
 
 .title-and-link a {
     text-decoration: underline;
+}
+
+.title-and-link a div:hover{
+    transform: translate(10px);
 }
 
 .arrow{
@@ -334,6 +338,21 @@ input[type="submit"]{
     background-image: linear-gradient(to right, var(--dark-grey), #6f3b06);
     color: var(--white);
     padding: var(--one-rem);
+}
+
+@media screen and (max-width: 500px){
+    .title-and-link h3,
+    .title-and-link a div {
+        width: 40%;
+    }
+
+    .location-and-hours-container div{
+        display: flex;
+    }
+
+    .location-and-hours-container div a{
+        align-self: center;
+    }
 }
 
 @media screen and (min-width: 545px) {
