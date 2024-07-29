@@ -93,11 +93,6 @@ header{
     color: var(--black);
 }
 
-.hidden{
-    position: absolute;
-    left: 99999px;
-}
-
 ul{
     list-style-type: none;
 }
